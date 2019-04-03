@@ -77,7 +77,9 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.11</version>
       <scope>runtime</scope>
+      
     </dependency>
 
     <!-- EhCache -->
@@ -206,6 +208,13 @@
             <artifactId>bootstrap</artifactId>
             <version>${webjars-bootstrap.version}</version>
           </dependency>
+          
+	    <dependency>
+	        <groupId>org.mockito</groupId>
+	        <artifactId>mockito-core</artifactId>
+	        <version>2.18.0</version>
+	    </dependency>
+
         </dependencies>
       </plugin>
     </plugins>
@@ -224,8 +233,16 @@
           </formats>
           <check />
         </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>cobertura</report>
+            </reports>
+          </reportSet>
+        </reportSets>
       </plugin>
     </plugins>
   </reporting>
+
 
 </project>
